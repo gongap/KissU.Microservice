@@ -77,6 +77,8 @@ namespace KissU.PublicWebSite.Host
                     options.Scope.Add("BloggingService");
                     options.ClaimActions.MapAbpClaimTypes();
                 });
+
+            context.Services.ConfigureNonBreakingSameSiteCookies();
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -86,6 +88,7 @@ namespace KissU.PublicWebSite.Host
             app.UseCorrelationId();
             app.UseVirtualFiles();
             app.UseRouting();
+            app.UseCookiePolicy();
             app.UseAuthentication();
 
             if (IsEnabledMultiTenancy())

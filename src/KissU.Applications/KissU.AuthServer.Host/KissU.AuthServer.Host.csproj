@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\KissU.AspNetCore\KissU.AspNetCore.csproj" />
     <ProjectReference Include="..\..\KissU.Shared\KissU.Shared.csproj" />
     <ProjectReference Include="..\KissU.ApplicationParts\KissU.ApplicationParts.Account.IdentityServer\KissU.ApplicationParts.Account.IdentityServer.csproj" />
   </ItemGroup>
