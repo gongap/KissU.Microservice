@@ -1,0 +1,22 @@
+<Project>
+  <PropertyGroup>
+    <Company>KissU</Company>
+    <Product>KissU</Product>
+    <Copyright>Copyright © Gongap. All rights reserved.</Copyright>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <RepositoryUrl>https://github.com/gongap/KissU.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/gongap/KissU</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIconUrl></PackageIconUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>kissu;microservice;applicationframework;dotnetcore;aspnetcore;</PackageTags>
+    <Version>1.0.0-preview-20200813-01</Version>
+    <VersionMajor>1</VersionMajor>
+    <VersionMinor>0</VersionMinor>
+    <VersionPatch>0</VersionPatch>
+		<VersionQuality>20200813-01</VersionQuality>
+		<VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
+		<VersionSuffix>preview-$(VersionQuality)</VersionSuffix>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+</Project>

@@ -9,23 +9,23 @@
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.5" />
     <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="3.0.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="KissU.Abp" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.Codec.MessagePack" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.Codec.ProtoBuffer" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.EventBus.RabbitMQ" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.ServiceDiscovery.Consul" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.CPlatform" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.DotNetty" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.Logging.Nlog" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.Caching" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.ServiceProxy" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.Modules.Identity.Service.Contracts" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.Modules.TenantManagement.Service.Contracts" Version="1.0.0-preview-20200811-01" />
+    <PackageReference Include="KissU.Abp" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.Codec.MessagePack" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.Codec.ProtoBuffer" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.EventBus.RabbitMQ" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.ServiceDiscovery.Consul" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.CPlatform" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.DotNetty" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.Logging.Nlog" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.Caching" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.ServiceProxy" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.Modules.Identity.Service.Contracts" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.Modules.TenantManagement.Service.Contracts" Version="1.0.0-preview-20200813-01" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,8 +10,8 @@
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.UI" Version="3.0.5" />
-    <PackageReference Include="KissU.CPlatform" Version="1.0.0-preview-20200811-01" />
-    <PackageReference Include="KissU.Kestrel.Http" Version="1.0.0-preview-20200811-01" />
+    <PackageReference Include="KissU.CPlatform" Version="1.0.0-preview-20200813-01" />
+    <PackageReference Include="KissU.Kestrel.Http" Version="1.0.0-preview-20200813-01" />
   </ItemGroup>
 
   <ItemGroup>
