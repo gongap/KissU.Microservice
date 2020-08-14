@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using KissU.Dependency;
 using KissU.Modules.Blogging.Application.Contracts.Blogs.Dtos;
 using KissU.Modules.Blogging.Service.Contracts;
 using KissU.ServiceProxy;
@@ -14,8 +15,9 @@ namespace KissU.ApplicationParts.Blogging.Pages.Blogs
 
         public IReadOnlyList<BlogDto> Blogs { get; private set; }
 
-        public IndexModel(IServiceProxyFactory serviceProxyFactory)
+        public IndexModel()
         {
+            var serviceProxyFactory = ServiceLocator.GetService<IServiceProxyFactory>();
             _blogService = serviceProxyFactory.CreateProxy<IBlogService>();
         }
 

@@ -13,6 +13,7 @@ using Volo.Abp.Http.Client.IdentityModel.Web;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.MultiTenancy;
+using Volo.Abp.Settings;
 using Volo.Abp.UI.Navigation;
 
 namespace KissU.PublicWebSite.Host
@@ -29,6 +30,11 @@ namespace KissU.PublicWebSite.Host
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             var configuration = context.Services.GetConfiguration();
+
+            Configure<AbpSettingOptions>(options =>
+            {
+                options.DefinitionProviders.Add<LocalizationSettingProvider>();
+            });
 
             Configure<AbpLocalizationOptions>(options =>
             {
