@@ -16,7 +16,7 @@ namespace KissU.Modules.Blogging.Service
         typeof(BloggingApplicationModule),
         typeof(BloggingEntityFrameworkCoreModule)
     )]
-    public class BloggingServiceModule : Volo.Abp.Modularity.AbpModule, IAbpServiceModule
+    public class BloggingServiceModule : Volo.Abp.Modularity.AbpModule, IAbpStartupModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {

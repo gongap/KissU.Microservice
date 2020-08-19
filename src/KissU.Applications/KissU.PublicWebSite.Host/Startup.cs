@@ -17,14 +17,14 @@ namespace KissU.PublicWebSite.Host
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            //builder.AddMicroService(service => { service.AddClient().AddCache(); });
-            //builder.Register(p => new CPlatformContainer(ServiceLocator.Current));
+            builder.AddMicroService(service => { service.AddClient().AddCache(); });
+            builder.Register(p => new CPlatformContainer(ServiceLocator.Current));
         }
 
         public void Configure(IApplicationBuilder app)
         {
             app.InitializeApplication();
-            //ServiceLocator.Register(app.ApplicationServices);
+            ServiceLocator.Register(app.ApplicationServices);
         }
     }
 }

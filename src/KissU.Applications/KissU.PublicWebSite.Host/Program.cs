@@ -1,17 +1,11 @@
 ﻿using System;
 using System.IO;
-using Autofac;
-using KissU.Caching;
 using KissU.Caching.Configurations;
 using KissU.CPlatform.Configurations;
-using KissU.Dependency;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
-using KissU.CPlatform;
-using KissU.Extensions;
-using KissU.ServiceProxy;
 
 namespace KissU.PublicWebSite.Host
 {
@@ -56,16 +50,11 @@ namespace KissU.PublicWebSite.Host
                     builder.AddCPlatformFile("servicesettings.json", false, true);
                     builder.AddCacheFile("cachesettings.json", false, true);
                 })
-                .UseServiceHostBuilder(builder =>
-                {
-                    builder.AddMicroService(service => { service.AddClient().AddCache(); });
-                    builder.Register(p => new CPlatformContainer(ServiceLocator.Current));
-                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 })
-                .UseClient()
+                .UseAutofac()
                 .UseSerilog();
     }
 }
