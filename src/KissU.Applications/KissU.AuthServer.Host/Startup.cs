@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+﻿using Autofac;
+using KissU.Dependency;
+using KissU.Caching;
+using KissU.CPlatform;
+using KissU.ServiceProxy;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace KissU.AuthServer.Host
 {
@@ -9,12 +12,19 @@ namespace KissU.AuthServer.Host
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<AuthServerHostModule>();
+            services.AddApplication<AppModule>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.AddMicroService(service => { service.AddClient().AddCache(); });
+            builder.Register(p => new CPlatformContainer(ServiceLocator.Current));
+        }
+
+        public void Configure(IApplicationBuilder app)
         {
             app.InitializeApplication();
+            app.UseClient();
         }
     }
 }

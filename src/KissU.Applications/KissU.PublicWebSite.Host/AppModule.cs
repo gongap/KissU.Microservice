@@ -1,4 +1,5 @@
 ﻿using System;
+using KissU.Abp.Autofac;
 using KissU.ApplicationParts.Blogging;
 using KissU.Shared.MultiTenancy;
 using Microsoft.AspNetCore.Authentication.OAuth.Claims;
@@ -8,7 +9,6 @@ using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Authentication.OAuth;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
-using Volo.Abp.Autofac;
 using Volo.Abp.Http.Client.IdentityModel.Web;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
@@ -25,7 +25,7 @@ namespace KissU.PublicWebSite.Host
         , typeof(AbpAspNetCoreMvcUiBasicThemeModule)
         , typeof(BloggingWebModule)
         )]
-    public class PublicWebSiteHostModule : AbpModule
+    public class AppModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
@@ -54,7 +54,7 @@ namespace KissU.PublicWebSite.Host
 
             Configure<AbpNavigationOptions>(options =>
             {
-                options.MenuContributors.Add(new PublicWebSiteMenuContributor(configuration));
+                options.MenuContributors.Add(new AppMenuContributor(configuration));
             });
 
             context.Services.AddAuthentication(options =>

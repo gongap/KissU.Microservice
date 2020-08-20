@@ -3,7 +3,7 @@ using Volo.Abp.DependencyInjection;
 
 namespace KissU.AuthServer.Host
 {
-    public class AuthServerBrandingProvider : DefaultBrandingProvider, ISingletonDependency
+    public class AppBrandingProvider : DefaultBrandingProvider, ISingletonDependency
     {
         public override string AppName => "Identity Server";
     }

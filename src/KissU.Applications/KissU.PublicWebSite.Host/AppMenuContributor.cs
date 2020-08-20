@@ -9,11 +9,11 @@ using Volo.Abp.Users;
 
 namespace KissU.PublicWebSite.Host
 {
-    public class PublicWebSiteMenuContributor : IMenuContributor
+    public class AppMenuContributor : IMenuContributor
     {
         private readonly IConfiguration _configuration;
 
-        public PublicWebSiteMenuContributor(IConfiguration configuration)
+        public AppMenuContributor(IConfiguration configuration)
         {
             _configuration = configuration;
         }

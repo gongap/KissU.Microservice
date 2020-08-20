@@ -1,22 +1,9 @@
 {
   "ServerEngine": {
-    "Ip": "${Server_IP}|127.0.0.1",
-    "WatchInterval": 30,
-    "Port": 98,
-    "MappingIp": "${Mapping_ip}",
-    "MappingPort": "${Mapping_Port}",
-    "Token": "true",
-    "Libuv": true,
-    "Protocol": "${Protocol}|Tcp", //Http¡¢Tcp¡¢None
-    "RootPath": "${RootPath}|d:\\microKissU",
-    "Ports": {
-      "HttpPort": "${HttpPort}|8080"
-    },
-    "RequestCacheEnabled": false,
     "Packages": [
       {
         "TypeName": "EnginePartModule",
-        "Using": "${UseEngineParts}|DotNettyModule;NLogModule;MessagePackModule;ConsulModule;HttpProtocolModule;ServiceProxyModule;EventBusRabbitMQModule;SkywalkingModule;"
+        "Using": "${UseEngineParts}|DotNettyModule;NLogModule;MessagePackModule;ConsulModule;ServiceProxyModule;"
       }
     ]
   },

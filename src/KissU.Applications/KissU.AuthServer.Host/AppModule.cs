@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using KissU.Abp.Autofac;
 using KissU.ApplicationParts.Account.IdentityServer;
 using KissU.AuthServer.Host.Localization;
 using KissU.Modules.Account.Application;
-using KissU.Modules.Account.Application.Contracts.Localization;
 using KissU.Modules.AuditLogging.EntityFrameworkCore.EntityFrameworkCore;
 using KissU.Modules.Identity.Application.Contracts;
 using KissU.Modules.Identity.EntityFrameworkCore;
@@ -26,7 +26,6 @@ using Volo.Abp.AspNetCore.Mvc.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.Auditing;
-using Volo.Abp.Autofac;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
@@ -58,7 +57,7 @@ namespace KissU.AuthServer.Host
         typeof(AbpTenantManagementApplicationContractsModule),
         typeof(AbpAspNetCoreSerilogModule)
     )]
-    public class AuthServerHostModule : AbpModule
+    public class AppModule : AbpModule
     {
         private const string DefaultCorsPolicyName = "Default";
 
@@ -66,7 +65,7 @@ namespace KissU.AuthServer.Host
         {
             context.Services.PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
             {
-                options.AddAssemblyResource(typeof(AuthServerResource), typeof(AuthServerHostModule).Assembly);
+                options.AddAssemblyResource(typeof(AuthServerResource), typeof(AppModule).Assembly);
             });
         }
 
@@ -195,7 +194,7 @@ namespace KissU.AuthServer.Host
         {
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.AddEmbedded<AuthServerHostModule>("KissU.AuthServer.Host");
+                options.FileSets.AddEmbedded<AppModule>("KissU.AuthServer.Host");
             });
 
             var hostingEnvironment = context.Services.GetHostingEnvironment();
@@ -203,7 +202,7 @@ namespace KissU.AuthServer.Host
             {
                 Configure<AbpVirtualFileSystemOptions>(options =>
                 {
-                    options.FileSets.ReplaceEmbeddedByPhysical<AuthServerHostModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}KissU.AuthServer.Host"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<AppModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}KissU.AuthServer.Host"));
                 });
             }
         }

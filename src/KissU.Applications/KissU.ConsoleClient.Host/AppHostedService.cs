@@ -6,7 +6,7 @@ using KissU.Extensions;
 
 namespace KissU.ConsoleClient.Host
 {
-    public class ConsoleClientDemoHostedService : IHostedService
+    public class AppHostedService : IHostedService
     {
         public async Task StartAsync(CancellationToken cancellationToken)
         {

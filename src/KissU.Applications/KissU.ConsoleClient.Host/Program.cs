@@ -1,18 +1,14 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Autofac;
 using KissU.Dependency;
 using KissU.Caching.Configurations;
 using KissU.CPlatform.Configurations;
 using Microsoft.Extensions.Hosting;
-using Serilog;
-using Serilog.Events;
 using KissU.Extensions;
 using KissU.Caching;
 using KissU.CPlatform;
 using KissU.ServiceProxy;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace KissU.ConsoleClient.Host
 {
@@ -23,9 +19,8 @@ namespace KissU.ConsoleClient.Host
             await CreateHostBuilder(args).RunConsoleAsync();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        internal static IHostBuilder CreateHostBuilder(string[] args) =>
             Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(args)
-                .ConfigureLogging(configure => configure.ClearProviders())
                 .ConfigureHostConfiguration(builder =>
                 {
                     builder.AddCPlatformFile("servicesettings.json", false, true);
@@ -38,7 +33,7 @@ namespace KissU.ConsoleClient.Host
                 })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddHostedService<ConsoleClientDemoHostedService>();
+                    services.AddHostedService<AppHostedService>();
                 })
                 .UseClient();
     }

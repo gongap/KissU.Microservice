@@ -11,8 +11,8 @@
     <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="3.1.5" />
     <PackageReference Include="Volo.Abp.AutoMapper" Version="3.0.5" />
     <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="3.0.5" />
-    <PackageReference Include="KissU.Modules.Identity.AspNetCore" Version="1.0.0-preview-2020081901" />
-    <PackageReference Include="KissU.Modules.Account.Service.Contracts" Version="1.0.0-preview-2020081901" />
+    <PackageReference Include="KissU.Modules.Identity.AspNetCore" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.Account.Service.Contracts" Version="1.0.0-preview-2020082001" />
   </ItemGroup>
 
   <ItemGroup>

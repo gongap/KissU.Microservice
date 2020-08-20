@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KissU.CPlatform" Version="1.0.0-preview-2020081901" />
+    <PackageReference Include="KissU.CPlatform" Version="1.0.0-preview-2020082001" />
   </ItemGroup>
 
 </Project>

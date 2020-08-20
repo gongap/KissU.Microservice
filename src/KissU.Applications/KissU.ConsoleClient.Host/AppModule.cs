@@ -1,4 +1,4 @@
-﻿using KissU.Abp;
+﻿using KissU.Abp.Business;
 using Volo.Abp.Http.Client.IdentityModel;
 using Volo.Abp.Modularity;
 
@@ -7,7 +7,7 @@ namespace KissU.ConsoleClient.Host
     [DependsOn(
         typeof(AbpHttpClientIdentityModelModule)
         )]
-    public class ConsoleClientDemoModule : Volo.Abp.Modularity.AbpModule, IAbpStartupModule
+    public class AppModule : AbpModule, IAbpStartupModule
     {
     }
 }

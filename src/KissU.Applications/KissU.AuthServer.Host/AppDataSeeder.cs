@@ -16,7 +16,7 @@ using Volo.Abp.Uow;
 
 namespace KissU.AuthServer.Host
 {
-    public class AuthServerDataSeeder : IDataSeedContributor, ITransientDependency
+    public class AppDataSeeder : IDataSeedContributor, ITransientDependency
     {
         private readonly IGuidGenerator _guidGenerator;
         private readonly IClientRepository _clientRepository;
@@ -24,7 +24,7 @@ namespace KissU.AuthServer.Host
         private readonly IPermissionDataSeeder _permissionDataSeeder;
         private readonly IIdentityResourceDataSeeder _identityResourceDataSeeder;
 
-        public AuthServerDataSeeder(
+        public AppDataSeeder(
             IClientRepository clientRepository,
             IApiResourceRepository apiResourceRepository,
             IIdentityResourceDataSeeder identityResourceDataSeeder,

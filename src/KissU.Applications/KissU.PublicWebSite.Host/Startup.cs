@@ -12,7 +12,7 @@ namespace KissU.PublicWebSite.Host
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<PublicWebSiteHostModule>();
+            services.AddApplication<AppModule>();
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -24,7 +24,7 @@ namespace KissU.PublicWebSite.Host
         public void Configure(IApplicationBuilder app)
         {
             app.InitializeApplication();
-            ServiceLocator.Register(app.ApplicationServices);
+            app.UseClient();
         }
     }
 }

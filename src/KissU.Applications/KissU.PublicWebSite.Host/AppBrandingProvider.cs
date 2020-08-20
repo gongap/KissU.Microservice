@@ -3,7 +3,7 @@ using Volo.Abp.DependencyInjection;
 
 namespace KissU.PublicWebSite.Host
 {
-    public class BrandingProvider : DefaultBrandingProvider, ISingletonDependency
+    public class AppBrandingProvider : DefaultBrandingProvider, ISingletonDependency
     {
         public override string AppName => "Public Web Site";
     }
