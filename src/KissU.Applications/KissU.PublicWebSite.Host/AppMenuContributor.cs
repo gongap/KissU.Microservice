@@ -33,7 +33,7 @@ namespace KissU.PublicWebSite.Host
         private Task ConfigureMainMenuAsync(MenuConfigurationContext context)
         {
             context.Menu.AddItem(new ApplicationMenuItem("App.Home", "Home", "/"));
-            context.Menu.AddItem(new ApplicationMenuItem("App.Products", "Products", "/Products"));
+            context.Menu.AddItem(new ApplicationMenuItem("App.Products", "Products", "/"));
             context.Menu.AddItem(new ApplicationMenuItem("App.Blog", "Blog", "/Blogs"));
 
             return Task.CompletedTask;

@@ -15,8 +15,10 @@
     var $postFormSubmitButton = $('#PostFormSubmitButton');
 
     var setCoverImage = function (file) {
-        $postCoverImage.val(file.fileUrl);
-        $coverImage.attr("src", file.fileUrl);
+        //$postCoverImage.val(file.fileUrl);
+        //$coverImage.attr("src", file.fileUrl);
+        $postCoverImage.val("file.fileUrl");
+        $coverImage.attr("src", "file.fileUrl");
         $coverImage.show();
         $postFormSubmitButton.removeAttr('disabled');
     };
@@ -27,7 +29,7 @@
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:281/api/blogging/files/images/uploadasync",
+            url: "/api/blogging/files/images/uploadasync",
             data: formData,
             contentType: false,
             processData: false,

@@ -5,6 +5,6 @@ namespace KissU.PublicWebSite.Host
 {
     public class AppBrandingProvider : DefaultBrandingProvider, ISingletonDependency
     {
-        public override string AppName => "Public Web Site";
+        public override string AppName => "KissU Microservice";
     }
 }

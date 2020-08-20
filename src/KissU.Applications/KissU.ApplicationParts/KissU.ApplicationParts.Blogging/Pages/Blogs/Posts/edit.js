@@ -69,12 +69,13 @@
 
         $.ajax({
             type: "POST",
-            url: "/api/blogging/files/images/upload",
+            url: "/api/blogging/files/images/uploadasync",
             data: formData,
             contentType: false,
             processData: false,
             success: function (response) {
-                callbackFn(response.fileUrl);
+                //callbackFn(response.fileUrl);
+                callbackFn("file.fileUrl");
             }
         });
     };
