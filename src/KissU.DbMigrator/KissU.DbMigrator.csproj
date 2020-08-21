@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\common.props" />
+  <Import Project="..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.2" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="KissU.Modules.AuditLogging.DbMigrator" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.BackgroundJobs.DbMigrator" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.FeatureManagement.DbMigrator" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.Identity.DbMigrator" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.IdentityServer.DbMigrator" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.PermissionManagement.DbMigrator" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.SettingManagement.DbMigrator" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.TenantManagement.DbMigrator" Version="1.0.0-preview-2020082001" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KissU.Modules\blogging\src\KissU.Modules.Blogging.DbMigrator\KissU.Modules.Blogging.DbMigrator.csproj" />
+  </ItemGroup>
+
+</Project>

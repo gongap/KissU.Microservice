@@ -11,7 +11,7 @@ namespace KissU.Modules.Blogging.DbMigrations.EntityFrameworkCore
      */
     public class MigrationsDbContext : AbpDbContext<MigrationsDbContext>
     {
-        public MigrationsDbContext(DbContextOptions<MigrationsDbContext> options) 
+        public MigrationsDbContext(DbContextOptions<MigrationsDbContext> options)
             : base(options)
         {
         }
@@ -20,7 +20,18 @@ namespace KissU.Modules.Blogging.DbMigrations.EntityFrameworkCore
         {
             base.OnModelCreating(builder);
 
-            /* Configure your own tables/entities inside the ConfigureIdentity method */
+            /* Include modules to your migration db context */
+
+            //builder.ConfigureIdentity();
+
+            /* Configure customizations for entities from the modules inclued */
+
+            //builder.Entity<IdentityUser>(b =>
+            //{
+            //    b.ConfigCustomUserProperties();
+            //});
+
+            /* Configure your own tables/entities inside the ConfigureBlogging method */
 
             builder.ConfigureBlogging();
         }

@@ -11,21 +11,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KissU.Modules", "KissU.Modu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KissU.Services.Stages", "KissU.Services.Stages", "{9192BD07-8901-413C-AC8A-FB8E8AD28488}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Blogging.Host", "KissU.Services.Hosts\KissU.Services.Blogging.Host\KissU.Services.Blogging.Host.csproj", "{5CD61961-9D4F-423E-8A57-26B7F3949F2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Blogging.Host", "src\KissU.Services.Hosts\KissU.Services.Blogging.Host\KissU.Services.Blogging.Host.csproj", "{5CD61961-9D4F-423E-8A57-26B7F3949F2F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Host", "KissU.Services.Hosts\KissU.Services.Host\KissU.Services.Host.csproj", "{621635B3-1FD7-458E-91CD-297469755874}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Host", "src\KissU.Services.Hosts\KissU.Services.Host\KissU.Services.Host.csproj", "{621635B3-1FD7-458E-91CD-297469755874}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Stage", "KissU.Services.Stages\KissU.Services.Stage\KissU.Services.Stage.csproj", "{EF96821B-0959-43CB-A9E5-3EB40788B9D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Stage", "src\KissU.Services.Stages\KissU.Services.Stage\KissU.Services.Stage.csproj", "{EF96821B-0959-43CB-A9E5-3EB40788B9D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.SampleA.Service", "KissU.Modules\sample\src\KissU.Modules.SampleA.Service\KissU.Modules.SampleA.Service.csproj", "{BDA3E7F6-5101-4F5A-B071-75E9515A07B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.SampleA.Service", "src\KissU.Modules\sample\src\KissU.Modules.SampleA.Service\KissU.Modules.SampleA.Service.csproj", "{BDA3E7F6-5101-4F5A-B071-75E9515A07B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.SampleB.Service", "KissU.Modules\sample\src\KissU.Modules.SampleB.Service\KissU.Modules.SampleB.Service.csproj", "{0C19FD77-7BBB-43CD-9FEA-703B78F2924D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.SampleB.Service", "src\KissU.Modules\sample\src\KissU.Modules.SampleB.Service\KissU.Modules.SampleB.Service.csproj", "{0C19FD77-7BBB-43CD-9FEA-703B78F2924D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Shared", "KissU.Shared\KissU.Shared.csproj", "{6A0888A0-2258-42C6-B6F9-5232EB2D7E50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Shared", "src\KissU.Shared\KissU.Shared.csproj", "{6A0888A0-2258-42C6-B6F9-5232EB2D7E50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.PublicWebSite.Host", "KissU.Applications\KissU.PublicWebSite.Host\KissU.PublicWebSite.Host.csproj", "{32269343-56DB-4D4A-9384-7693DD2E758E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.PublicWebSite.Host", "src\KissU.Applications\KissU.PublicWebSite.Host\KissU.PublicWebSite.Host.csproj", "{32269343-56DB-4D4A-9384-7693DD2E758E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.ConsoleClient.Host", "KissU.Applications\KissU.ConsoleClient.Host\KissU.ConsoleClient.Host.csproj", "{AA3423AD-C54E-43C1-AC6A-27D0419094A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.ConsoleClient.Host", "src\KissU.Applications\KissU.ConsoleClient.Host\KissU.ConsoleClient.Host.csproj", "{AA3423AD-C54E-43C1-AC6A-27D0419094A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KissU.ApplicationParts", "KissU.ApplicationParts", "{06DA79D2-B5D4-4542-8F6C-9DF0AC5234D6}"
 EndProject
@@ -33,45 +33,49 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{867E54
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0D8330AC-9B3C-490B-B815-BC6C9C8B79D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.ApplicationParts.Account", "KissU.Applications\KissU.ApplicationParts\KissU.ApplicationParts.Account\KissU.ApplicationParts.Account.csproj", "{2FF474FA-3D5A-467E-8D27-6C88F3B0C706}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.ApplicationParts.Account", "src\KissU.Applications\KissU.ApplicationParts\KissU.ApplicationParts.Account\KissU.ApplicationParts.Account.csproj", "{2FF474FA-3D5A-467E-8D27-6C88F3B0C706}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.ApplicationParts.Account.IdentityServer", "KissU.Applications\KissU.ApplicationParts\KissU.ApplicationParts.Account.IdentityServer\KissU.ApplicationParts.Account.IdentityServer.csproj", "{7E515C97-521D-4616-AA25-2519301462AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.ApplicationParts.Account.IdentityServer", "src\KissU.Applications\KissU.ApplicationParts\KissU.ApplicationParts.Account.IdentityServer\KissU.ApplicationParts.Account.IdentityServer.csproj", "{7E515C97-521D-4616-AA25-2519301462AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.ApplicationParts.Blogging", "KissU.Applications\KissU.ApplicationParts\KissU.ApplicationParts.Blogging\KissU.ApplicationParts.Blogging.csproj", "{15C81048-9A40-48F2-952B-4569839B0ECB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.ApplicationParts.Blogging", "src\KissU.Applications\KissU.ApplicationParts\KissU.ApplicationParts.Blogging\KissU.ApplicationParts.Blogging.csproj", "{15C81048-9A40-48F2-952B-4569839B0ECB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.SampleA.Service.Contracts", "KissU.Modules\sample\src\KissU.Modules.SampleA.Service.Contracts\KissU.Modules.SampleA.Service.Contracts.csproj", "{A8FF37ED-2665-4A1A-A302-366026C22221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.SampleA.Service.Contracts", "src\KissU.Modules\sample\src\KissU.Modules.SampleA.Service.Contracts\KissU.Modules.SampleA.Service.Contracts.csproj", "{A8FF37ED-2665-4A1A-A302-366026C22221}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.SampleB.Service.Contracts", "KissU.Modules\sample\src\KissU.Modules.SampleB.Service.Contracts\KissU.Modules.SampleB.Service.Contracts.csproj", "{E355B2A2-EAC5-421C-B4B2-4BFC44DACA4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.SampleB.Service.Contracts", "src\KissU.Modules\sample\src\KissU.Modules.SampleB.Service.Contracts\KissU.Modules.SampleB.Service.Contracts.csproj", "{E355B2A2-EAC5-421C-B4B2-4BFC44DACA4C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.AuthServer.Host", "KissU.Applications\KissU.AuthServer.Host\KissU.AuthServer.Host.csproj", "{6B5C8751-0329-4802-BC17-7D4AE098DDC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.AuthServer.Host", "src\KissU.Applications\KissU.AuthServer.Host\KissU.AuthServer.Host.csproj", "{6B5C8751-0329-4802-BC17-7D4AE098DDC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bloging", "Bloging", "{109A1F97-7ED4-409D-8885-923B751817AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{78FAB2B0-6EA5-4F78-A58E-BE3D14E11DE4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Domain.Shared", "KissU.Modules\blogging\src\KissU.Modules.Blogging.Domain.Shared\KissU.Modules.Blogging.Domain.Shared.csproj", "{28B55ABC-1F4C-4288-87CD-938E92937DAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Domain.Shared", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.Domain.Shared\KissU.Modules.Blogging.Domain.Shared.csproj", "{28B55ABC-1F4C-4288-87CD-938E92937DAB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Domain", "KissU.Modules\blogging\src\KissU.Modules.Blogging.Domain\KissU.Modules.Blogging.Domain.csproj", "{1C78EC65-F639-44A6-A50B-16F59E2F4ACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Domain", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.Domain\KissU.Modules.Blogging.Domain.csproj", "{1C78EC65-F639-44A6-A50B-16F59E2F4ACA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.EntityFrameworkCore", "KissU.Modules\blogging\src\KissU.Modules.Blogging.EntityFrameworkCore\KissU.Modules.Blogging.EntityFrameworkCore.csproj", "{522A3524-0A59-462B-A0EB-986318C14CA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.EntityFrameworkCore", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.EntityFrameworkCore\KissU.Modules.Blogging.EntityFrameworkCore.csproj", "{522A3524-0A59-462B-A0EB-986318C14CA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Service", "KissU.Modules\blogging\src\KissU.Modules.Blogging.Service\KissU.Modules.Blogging.Service.csproj", "{C0AB48AE-ED1C-4AC6-B304-783EA56C06B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Service", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.Service\KissU.Modules.Blogging.Service.csproj", "{C0AB48AE-ED1C-4AC6-B304-783EA56C06B3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Service.Contracts", "KissU.Modules\blogging\src\KissU.Modules.Blogging.Service.Contracts\KissU.Modules.Blogging.Service.Contracts.csproj", "{F1573EDF-73B8-4EE6-8E86-DB3F8CFE7EB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Service.Contracts", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.Service.Contracts\KissU.Modules.Blogging.Service.Contracts.csproj", "{F1573EDF-73B8-4EE6-8E86-DB3F8CFE7EB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.DbMigrator", "KissU.Modules\blogging\src\KissU.Modules.Blogging.DbMigrator\KissU.Modules.Blogging.DbMigrator.csproj", "{E742CE13-E431-4644-8F7F-EBA6947CFB6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.DbMigrator", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.DbMigrator\KissU.Modules.Blogging.DbMigrator.csproj", "{E742CE13-E431-4644-8F7F-EBA6947CFB6D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.DbMigrations", "KissU.Modules\blogging\src\KissU.Modules.Blogging.DbMigrations\KissU.Modules.Blogging.DbMigrations.csproj", "{E6B3BB9E-2E99-4449-AC5C-54348A138650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.DbMigrations", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.DbMigrations\KissU.Modules.Blogging.DbMigrations.csproj", "{E6B3BB9E-2E99-4449-AC5C-54348A138650}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Application.Contracts.Shared", "KissU.Modules\blogging\src\KissU.Modules.Blogging.Application.Contracts.Shared\KissU.Modules.Blogging.Application.Contracts.Shared.csproj", "{FE093756-365F-496F-8466-BB43A33F1FA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Application.Contracts.Shared", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.Application.Contracts.Shared\KissU.Modules.Blogging.Application.Contracts.Shared.csproj", "{FE093756-365F-496F-8466-BB43A33F1FA2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Application.Contracts", "KissU.Modules\blogging\src\KissU.Modules.Blogging.Application.Contracts\KissU.Modules.Blogging.Application.Contracts.csproj", "{F24D35C6-7D62-411F-A07B-E8DCF05F372F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Application.Contracts", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.Application.Contracts\KissU.Modules.Blogging.Application.Contracts.csproj", "{F24D35C6-7D62-411F-A07B-E8DCF05F372F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Application", "KissU.Modules\blogging\src\KissU.Modules.Blogging.Application\KissU.Modules.Blogging.Application.csproj", "{5B1C00A1-E549-4B3A-AE17-CA7BD0DEA1FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Modules.Blogging.Application", "src\KissU.Modules\blogging\src\KissU.Modules.Blogging.Application\KissU.Modules.Blogging.Application.csproj", "{5B1C00A1-E549-4B3A-AE17-CA7BD0DEA1FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Sample.Host", "KissU.Services.Hosts\KissU.Services.Sample.Host\KissU.Services.Sample.Host.csproj", "{7FA0CAB0-35A1-4B2B-919E-F976DED02225}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Sample.Host", "src\KissU.Services.Hosts\KissU.Services.Sample.Host\KissU.Services.Sample.Host.csproj", "{7FA0CAB0-35A1-4B2B-919E-F976DED02225}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.AdminConsole", "KissU.Applications\KissU.AdminConsole\KissU.AdminConsole.csproj", "{E6EBC354-FA36-4785-B733-D257C6A6A74A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.AdminConsole", "src\KissU.Applications\KissU.AdminConsole\KissU.AdminConsole.csproj", "{E6EBC354-FA36-4785-B733-D257C6A6A74A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D117165E-8B59-423A-B387-4C63B62F342E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.DbMigrator", "src\KissU.DbMigrator\KissU.DbMigrator.csproj", "{22E1ED27-C4FA-404C-956E-B9558C460A48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,16 +187,25 @@ Global
 		{E6EBC354-FA36-4785-B733-D257C6A6A74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6EBC354-FA36-4785-B733-D257C6A6A74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6EBC354-FA36-4785-B733-D257C6A6A74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E1ED27-C4FA-404C-956E-B9558C460A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E1ED27-C4FA-404C-956E-B9558C460A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E1ED27-C4FA-404C-956E-B9558C460A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E1ED27-C4FA-404C-956E-B9558C460A48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{B4367C3C-5645-40C3-953C-466D82432072} = {D117165E-8B59-423A-B387-4C63B62F342E}
+		{C1026A33-6D55-42E1-91C5-1B2AEC36CA56} = {D117165E-8B59-423A-B387-4C63B62F342E}
+		{EBA864A3-39C4-4279-A823-35BA7EF2469A} = {D117165E-8B59-423A-B387-4C63B62F342E}
+		{9192BD07-8901-413C-AC8A-FB8E8AD28488} = {D117165E-8B59-423A-B387-4C63B62F342E}
 		{5CD61961-9D4F-423E-8A57-26B7F3949F2F} = {B4367C3C-5645-40C3-953C-466D82432072}
 		{621635B3-1FD7-458E-91CD-297469755874} = {B4367C3C-5645-40C3-953C-466D82432072}
 		{EF96821B-0959-43CB-A9E5-3EB40788B9D8} = {9192BD07-8901-413C-AC8A-FB8E8AD28488}
 		{BDA3E7F6-5101-4F5A-B071-75E9515A07B9} = {0D8330AC-9B3C-490B-B815-BC6C9C8B79D1}
 		{0C19FD77-7BBB-43CD-9FEA-703B78F2924D} = {0D8330AC-9B3C-490B-B815-BC6C9C8B79D1}
+		{6A0888A0-2258-42C6-B6F9-5232EB2D7E50} = {D117165E-8B59-423A-B387-4C63B62F342E}
 		{32269343-56DB-4D4A-9384-7693DD2E758E} = {C1026A33-6D55-42E1-91C5-1B2AEC36CA56}
 		{AA3423AD-C54E-43C1-AC6A-27D0419094A8} = {C1026A33-6D55-42E1-91C5-1B2AEC36CA56}
 		{06DA79D2-B5D4-4542-8F6C-9DF0AC5234D6} = {C1026A33-6D55-42E1-91C5-1B2AEC36CA56}
@@ -218,6 +231,7 @@ Global
 		{5B1C00A1-E549-4B3A-AE17-CA7BD0DEA1FC} = {78FAB2B0-6EA5-4F78-A58E-BE3D14E11DE4}
 		{7FA0CAB0-35A1-4B2B-919E-F976DED02225} = {B4367C3C-5645-40C3-953C-466D82432072}
 		{E6EBC354-FA36-4785-B733-D257C6A6A74A} = {C1026A33-6D55-42E1-91C5-1B2AEC36CA56}
+		{22E1ED27-C4FA-404C-956E-B9558C460A48} = {D117165E-8B59-423A-B387-4C63B62F342E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA6E8E23-8AB6-4AB6-9B31-494CB7CE5E63}
