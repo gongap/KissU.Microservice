@@ -3,7 +3,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using KissU.Modules.Blogging.Domain.Users;
-using KissU.Modules.Blogging.EntityFrameworkCore.EntityFrameworkCore;
 using KissU.Modules.Users.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;

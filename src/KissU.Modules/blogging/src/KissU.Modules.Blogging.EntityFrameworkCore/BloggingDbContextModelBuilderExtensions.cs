@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
-namespace KissU.Modules.Blogging.EntityFrameworkCore.EntityFrameworkCore
+namespace KissU.Modules.Blogging.EntityFrameworkCore
 {
     public static class BloggingDbContextModelBuilderExtensions
     {

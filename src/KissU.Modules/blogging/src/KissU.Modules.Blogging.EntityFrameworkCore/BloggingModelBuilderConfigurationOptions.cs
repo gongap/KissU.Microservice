@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
-namespace KissU.Modules.Blogging.EntityFrameworkCore.EntityFrameworkCore
+namespace KissU.Modules.Blogging.EntityFrameworkCore
 {
     public class BloggingModelBuilderConfigurationOptions : AbpModelBuilderConfigurationOptions
     {

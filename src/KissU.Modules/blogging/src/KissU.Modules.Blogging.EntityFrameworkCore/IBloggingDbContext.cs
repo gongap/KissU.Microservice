@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace KissU.Modules.Blogging.EntityFrameworkCore.EntityFrameworkCore
+namespace KissU.Modules.Blogging.EntityFrameworkCore
 {
     [ConnectionStringName(BloggingDbProperties.ConnectionStringName)]
     public interface IBloggingDbContext : IEfCoreDbContext

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace KissU.Modules.Blogging.EntityFrameworkCore.EntityFrameworkCore
+namespace KissU.Modules.Blogging.EntityFrameworkCore
 {
     /* This is your actual DbContext used on runtime.
      * It includes only your entities.

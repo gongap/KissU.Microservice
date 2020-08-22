@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 
-namespace KissU.Modules.Blogging.EntityFrameworkCore.EntityFrameworkCore
+namespace KissU.Modules.Blogging.EntityFrameworkCore
 {
     [DependsOn(
         typeof(BloggingDomainModule),
