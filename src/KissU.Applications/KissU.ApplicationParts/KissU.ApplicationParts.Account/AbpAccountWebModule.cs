@@ -1,5 +1,5 @@
-﻿using KissU.Modules.Account.Application.Contracts.Localization;
-using KissU.Modules.Account.Service.Contracts;
+﻿using KissU.Modules.Account.Application;
+using KissU.Modules.Account.Application.Contracts.Localization;
 using KissU.Modules.Identity.AspNetCore;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,10 +14,10 @@ using Volo.Abp.VirtualFileSystem;
 namespace KissU.ApplicationParts.Account
 {
     [DependsOn(
-        typeof(AccountServiceContractsModule),
-        typeof(AbpIdentityAspNetCoreModule),
         typeof(AbpAutoMapperModule),
-        typeof(AbpAspNetCoreMvcUiThemeSharedModule)
+        typeof(AbpAspNetCoreMvcUiThemeSharedModule),
+        typeof(AbpAccountApplicationModule),
+        typeof(AbpIdentityAspNetCoreModule)
         )]
     public class AbpAccountWebModule : AbpModule
     {

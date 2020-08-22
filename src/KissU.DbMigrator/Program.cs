@@ -32,7 +32,8 @@ namespace KissU.DbMigrator
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddHostedService<Modules.Blogging.DbMigrator.DbMigratorHostedService>();
+                    services.AddHostedService<AppHostedService>();
+                    services.AddHostedService<KissU.Modules.Blogging.DbMigrator.DbMigratorHostedService>();
                     services.AddHostedService<Modules.Identity.DbMigrator.DbMigratorHostedService>();
                     services.AddHostedService<Modules.IdentityServer.DbMigrator.DbMigratorHostedService>();
                     services.AddHostedService<Modules.AuditLogging.DbMigrator.DbMigratorHostedService>();

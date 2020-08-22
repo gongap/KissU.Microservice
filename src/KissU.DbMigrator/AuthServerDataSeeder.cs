@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using KissU.Modules.Identity.Application.Contracts;
+using KissU.Modules.Identity.Domain.Shared;
 using KissU.Modules.IdentityServer.AspNetIdentity;
 using KissU.Modules.IdentityServer.Domain.ApiResources;
 using KissU.Modules.IdentityServer.Domain.Clients;
+using KissU.Modules.IdentityServer.Domain.IdentityResources;
 using KissU.Modules.PermissionManagement.Domain;
-using KissU.Modules.TenantManagement.Application.Contracts;
+using KissU.Modules.TenantManagement.Domain.Shared;
 using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
@@ -16,32 +17,36 @@ using Volo.Abp.Uow;
 
 namespace KissU.AuthServer.Host
 {
-    public class AppDataSeeder : IDataSeedContributor, ITransientDependency
+    public class AuthServerDataSeeder : IDataSeedContributor, ITransientDependency
     {
         private readonly IGuidGenerator _guidGenerator;
         private readonly IClientRepository _clientRepository;
         private readonly IApiResourceRepository _apiResourceRepository;
         private readonly IPermissionDataSeeder _permissionDataSeeder;
         private readonly IIdentityResourceDataSeeder _identityResourceDataSeeder;
+        private readonly IIdentityClaimTypeDataSeeder _identityClaimTypeDataSeeder;
 
-        public AppDataSeeder(
+        public AuthServerDataSeeder(
             IClientRepository clientRepository,
             IApiResourceRepository apiResourceRepository,
             IIdentityResourceDataSeeder identityResourceDataSeeder,
             IGuidGenerator guidGenerator,
-            IPermissionDataSeeder permissionDataSeeder)
+            IPermissionDataSeeder permissionDataSeeder, 
+            IIdentityClaimTypeDataSeeder identityClaimTypeDataSeeder)
         {
             _clientRepository = clientRepository;
             _apiResourceRepository = apiResourceRepository;
             _identityResourceDataSeeder = identityResourceDataSeeder;
             _guidGenerator = guidGenerator;
             _permissionDataSeeder = permissionDataSeeder;
+            _identityClaimTypeDataSeeder = identityClaimTypeDataSeeder;
         }
 
         [UnitOfWork]
         public virtual async Task SeedAsync(DataSeedContext context)
         {
             await _identityResourceDataSeeder.CreateStandardResourcesAsync();
+            await _identityClaimTypeDataSeeder.CreateStandardClaimTypesAsync();
             await CreateApiResourcesAsync();
             await CreateClientsAsync();
         }

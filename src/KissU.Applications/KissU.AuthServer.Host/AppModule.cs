@@ -1,20 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using KissU.Abp.Autofac;
-using KissU.ApplicationParts.Account.IdentityServer;
-using KissU.AuthServer.Host.Localization;
-using KissU.Modules.Account.Application;
-using KissU.Modules.AuditLogging.EntityFrameworkCore.EntityFrameworkCore;
-using KissU.Modules.Identity.Application.Contracts;
-using KissU.Modules.Identity.EntityFrameworkCore;
-using KissU.Modules.IdentityServer.EntityFrameworkCore;
-using KissU.Modules.PermissionManagement.EntityFrameworkCore;
-using KissU.Modules.SettingManagement.EntityFrameworkCore;
-using KissU.Modules.TenantManagement.Application.Contracts;
-using KissU.Modules.TenantManagement.EntityFrameworkCore;
-using KissU.Shared.MultiTenancy;
-using Localization.Resources.AbpUi;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
@@ -34,28 +20,26 @@ using Volo.Abp.Modularity;
 using Volo.Abp.MultiTenancy;
 using Volo.Abp.Threading;
 using Volo.Abp.VirtualFileSystem;
-using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.Caching;
 using Volo.Abp.UI.Navigation.Urls;
+using Localization.Resources.AbpUi;
+using KissU.Abp.Autofac;
+using KissU.ApplicationParts.Account.IdentityServer;
+using KissU.AuthServer.Host.Localization;
+using KissU.Modules.Identity.EntityFrameworkCore;
+using KissU.Modules.IdentityServer.EntityFrameworkCore;
+using KissU.Shared.MultiTenancy;
 
 namespace KissU.AuthServer.Host
 {
     [DependsOn(
         typeof(AbpAutofacModule),
-        typeof(AbpPermissionManagementEntityFrameworkCoreModule),
-        typeof(AbpAuditLoggingEntityFrameworkCoreModule),
-        typeof(AbpSettingManagementEntityFrameworkCoreModule),
-        typeof(AbpIdentityEntityFrameworkCoreModule),
-        typeof(AbpIdentityApplicationContractsModule),
-        typeof(AbpAccountApplicationModule),
-        typeof(AbpIdentityServerEntityFrameworkCoreModule),
-        typeof(AbpEntityFrameworkCoreSqlServerModule),
-        typeof(AbpAccountWebIdentityServerModule),
         typeof(AbpAspNetCoreMvcUiBasicThemeModule),
-        typeof(AbpTenantManagementEntityFrameworkCoreModule),
-        typeof(AbpTenantManagementApplicationContractsModule),
-        typeof(AbpAspNetCoreSerilogModule)
+        typeof(AbpAccountWebIdentityServerModule),
+        typeof(AbpEntityFrameworkCoreSqlServerModule),
+        typeof(AbpIdentityEntityFrameworkCoreModule),
+        typeof(AbpIdentityServerEntityFrameworkCoreModule)
     )]
     public class AppModule : AbpModule
     {
@@ -103,7 +87,6 @@ namespace KissU.AuthServer.Host
             ConfigureLocalizationServices();
             ConfigureCache(configuration);
             ConfigureVirtualFileSystem(context);
-            ConfigureRedis(context, configuration, hostingEnvironment);
             ConfigureCors(context, configuration);
 
             context.Services.ConfigureNonBreakingSameSiteCookies();
@@ -139,7 +122,6 @@ namespace KissU.AuthServer.Host
             app.UseIdentityServer();
             app.UseAuthorization();
             app.UseAuditing();
-            app.UseAbpSerilogEnrichers();
             app.UseConfiguredEndpoints();
 
             RunDataSeeder(context);
@@ -216,23 +198,6 @@ namespace KissU.AuthServer.Host
             {
                 options.KeyPrefix = "AuthServer:";
             });
-        }
-
-        /// <summary>
-        /// 配置Redis
-        /// </summary>
-        private void ConfigureRedis(ServiceConfigurationContext context, IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
-        {
-            //context.Services.AddStackExchangeRedisCache(options =>
-            //{
-            //    options.Configuration = configuration["Redis:Configuration"];
-            //});
-
-            //if (!hostingEnvironment.IsDevelopment())
-            //{
-            //    var redis = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
-            //    context.Services.AddDataProtection().PersistKeysToStackExchangeRedis(redis, "AuthServer-Protection-Keys");
-            //}
         }
 
         /// <summary>
