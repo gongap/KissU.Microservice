@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KissU.ServiceProxy" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.ServiceProxy" Version="1.0.0-preview-2020082202" />
   </ItemGroup>
 
   <ItemGroup>

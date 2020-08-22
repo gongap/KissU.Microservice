@@ -29,14 +29,14 @@
     <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
-    <PackageReference Include="KissU.Modules.AuditLogging.DbMigrator" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Modules.BackgroundJobs.DbMigrator" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Modules.FeatureManagement.DbMigrator" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Modules.Identity.DbMigrator" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Modules.IdentityServer.DbMigrator" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Modules.PermissionManagement.DbMigrator" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Modules.SettingManagement.DbMigrator" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Modules.TenantManagement.DbMigrator" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.AuditLogging.DbMigrator" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Modules.BackgroundJobs.DbMigrator" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Modules.FeatureManagement.DbMigrator" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Modules.Identity.DbMigrator" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Modules.IdentityServer.DbMigrator" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Modules.PermissionManagement.DbMigrator" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Modules.SettingManagement.DbMigrator" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Modules.TenantManagement.DbMigrator" Version="1.0.0-preview-2020082202" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,5 @@
 ﻿using KissU.Modules.Identity.AspNetCore;
-using KissU.Modules.IdentityServer.Domain;
+using KissU.Modules.IdentityServer.AspNetIdentity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Modularity;
@@ -9,7 +9,7 @@ namespace KissU.ApplicationParts.Account.IdentityServer
 {
     [DependsOn(
         typeof(AbpAccountWebModule),
-        typeof(AbpIdentityServerDomainModule)
+        typeof(AbpIdentityServerAspNetIdentityModule)
         )]
     public class AbpAccountWebIdentityServerModule : AbpModule
     {

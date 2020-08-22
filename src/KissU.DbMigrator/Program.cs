@@ -7,7 +7,7 @@ using Serilog.Events;
 
 namespace KissU.DbMigrator
 {
-    class Program
+    internal class Program
     {
         static async Task Main(string[] args)
         {
@@ -25,10 +25,10 @@ namespace KissU.DbMigrator
                 .WriteTo.Console()
                 .CreateLogger();
 
-                await CreateHostBuilder(args).RunConsoleAsync();
+            await CreateHostBuilder(args).RunConsoleAsync();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        internal static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
@@ -37,10 +37,10 @@ namespace KissU.DbMigrator
                     services.AddHostedService<Modules.IdentityServer.DbMigrator.DbMigratorHostedService>();
                     services.AddHostedService<Modules.AuditLogging.DbMigrator.DbMigratorHostedService>();
                     services.AddHostedService<Modules.BackgroundJobs.DbMigrator.DbMigratorHostedService>();
-                    services.AddHostedService<Modules.SettingManagement.DbMigrator.DbMigratorHostedService>();
-                    services.AddHostedService<Modules.PermissionManagement.DbMigrator.DbMigratorHostedService>();
-                    services.AddHostedService<Modules.FeatureManagement.DbMigrator.DbMigratorHostedService>();
                     services.AddHostedService<Modules.TenantManagement.DbMigrator.DbMigratorHostedService>();
+                    services.AddHostedService<Modules.SettingManagement.DbMigrator.DbMigratorHostedService>();
+                    services.AddHostedService<Modules.FeatureManagement.DbMigrator.DbMigratorHostedService>();
+                    services.AddHostedService<Modules.PermissionManagement.DbMigrator.DbMigratorHostedService>();
                 });
     }
 }

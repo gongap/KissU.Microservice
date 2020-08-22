@@ -12,8 +12,8 @@
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.UI" Version="3.0.5" />
-    <PackageReference Include="KissU.CPlatform" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Kestrel.Http" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.CPlatform" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Kestrel.Http" Version="1.0.0-preview-2020082202" />
   </ItemGroup>
 
   <ItemGroup>

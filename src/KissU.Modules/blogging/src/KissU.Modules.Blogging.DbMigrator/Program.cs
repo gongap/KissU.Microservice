@@ -7,7 +7,7 @@ using Serilog.Events;
 
 namespace KissU.Modules.Blogging.DbMigrator
 {
-    class Program
+    internal class Program
     {
         static async Task Main(string[] args)
         {
@@ -16,9 +16,9 @@ namespace KissU.Modules.Blogging.DbMigrator
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .MinimumLevel.Override("Volo.Abp", LogEventLevel.Warning)
 #if DEBUG
-                .MinimumLevel.Override("Acme.QuickStart", LogEventLevel.Debug)
+                .MinimumLevel.Override("KissU.Modules.Blogging", LogEventLevel.Debug)
 #else
-                .MinimumLevel.Override("Acme.QuickStart", LogEventLevel.Information)
+                .MinimumLevel.Override("KissU.Modules.Blogging", LogEventLevel.Information)
 #endif
                 .Enrich.FromLogContext()
                 .WriteTo.File(Path.Combine(Directory.GetCurrentDirectory(), "logs/logs.txt"))
@@ -28,7 +28,7 @@ namespace KissU.Modules.Blogging.DbMigrator
             await CreateHostBuilder(args).RunConsoleAsync();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        internal static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {

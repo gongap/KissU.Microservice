@@ -31,11 +31,11 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="KissU.Caching" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.DotNetty.WebSocket" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.Kestrel.Http" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.DotNetty.Mqtt" Version="1.0.0-preview-2020082001" />
-    <PackageReference Include="KissU.WebSocket" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Caching" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.DotNetty.WebSocket" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.Kestrel.Http" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.DotNetty.Mqtt" Version="1.0.0-preview-2020082202" />
+    <PackageReference Include="KissU.WebSocket" Version="1.0.0-preview-2020082202" />
   </ItemGroup>
 
 </Project>

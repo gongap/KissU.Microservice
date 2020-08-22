@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace KissU.Services.Stages
 {
-    public class Program
+    internal class Program
     {
         static async Task Main(string[] args)
         {

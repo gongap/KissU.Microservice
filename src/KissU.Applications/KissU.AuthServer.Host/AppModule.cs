@@ -8,7 +8,7 @@ using KissU.Modules.Account.Application;
 using KissU.Modules.AuditLogging.EntityFrameworkCore.EntityFrameworkCore;
 using KissU.Modules.Identity.Application.Contracts;
 using KissU.Modules.Identity.EntityFrameworkCore;
-using KissU.Modules.IdentityServer.EntityFrameworkCore.EntityFrameworkCore;
+using KissU.Modules.IdentityServer.EntityFrameworkCore;
 using KissU.Modules.PermissionManagement.EntityFrameworkCore;
 using KissU.Modules.SettingManagement.EntityFrameworkCore;
 using KissU.Modules.TenantManagement.Application.Contracts;

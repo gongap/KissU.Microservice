@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="System.Security.Principal.Windows" Version="4.7.0" />
     <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="3.1.5" />
-    <PackageReference Include="KissU.Modules.IdentityServer.Domain" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.IdentityServer.AspNetIdentity" Version="1.0.0-preview-2020082202" />
   </ItemGroup>
 
   <ItemGroup>

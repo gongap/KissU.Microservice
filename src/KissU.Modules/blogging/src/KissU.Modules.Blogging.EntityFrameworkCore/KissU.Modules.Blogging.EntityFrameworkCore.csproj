@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="3.0.5" />
-    <PackageReference Include="KissU.Modules.Users.EntityFrameworkCore" Version="1.0.0-preview-2020082001" />
+    <PackageReference Include="KissU.Modules.Users.EntityFrameworkCore" Version="1.0.0-preview-2020082202" />
   </ItemGroup>
 
   <ItemGroup>
