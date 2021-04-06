@@ -6,14 +6,14 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>..\..\output\KissU.Modules.Account.Service.Contracts.xml</DocumentationFile>
-    <OutputPath>..\..\output\</OutputPath>
+    <DocumentationFile>..\..\..\output\KissU.Modules.Account.Service.Contracts.xml</DocumentationFile>
+    <OutputPath>..\..\..\output\</OutputPath>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>..\..\output\KissU.Modules.Account.Service.Contracts.xml</DocumentationFile>
-    <OutputPath>..\..\output\</OutputPath>
+    <DocumentationFile>..\..\..\output\KissU.Modules.Account.Service.Contracts.xml</DocumentationFile>
+    <OutputPath>..\..\..\output\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

@@ -5,13 +5,13 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>..\..\output\KissU.Modules.Common.Service.Contracts.xml</DocumentationFile>
-    <OutputPath>..\..\output\</OutputPath>
+    <DocumentationFile>..\..\..\output\KissU.Modules.Common.Service.Contracts.xml</DocumentationFile>
+    <OutputPath>..\..\..\output\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\output\</OutputPath>
-    <DocumentationFile>..\..\output\KissU.Modules.Common.Service.Contracts.xml</DocumentationFile>
+    <OutputPath>..\..\..\output\</OutputPath>
+    <DocumentationFile>..\..\..\output\KissU.Modules.Common.Service.Contracts.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
