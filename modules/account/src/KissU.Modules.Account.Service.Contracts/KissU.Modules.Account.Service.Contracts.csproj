@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\..\common.props" />
+  <Import Project="..\..\..\..\common.props" />
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Description>账户模块：提供账户管理,并允许用户登录/注册应用程序.</Description>
