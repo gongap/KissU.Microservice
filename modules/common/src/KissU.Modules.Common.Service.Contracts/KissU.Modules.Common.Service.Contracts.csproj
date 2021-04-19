@@ -17,8 +17,8 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Core" Version="4.2.1" />
     <PackageReference Include="Volo.Abp.Account.Application.Contracts" Version="4.2.1" />
-    <PackageReference Include="KissU.CPlatform" Version="1.2.2" />
-    <PackageReference Include="KissU.WebSocket" Version="1.2.2" />
+    <PackageReference Include="KissU.CPlatform" Version="1.2.8" />
+    <PackageReference Include="KissU.WebSocket" Version="1.2.8" />
   </ItemGroup>
   
 </Project>
