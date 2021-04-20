@@ -15,7 +15,7 @@ services:
     image: ${REGISTRY:-kissu}/services.host:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
-      dockerfile: Services/KissU.Services.Host/Dockerfile
+      dockerfile: services/KissU.Services.Host/Dockerfile
     depends_on:
       - consul
       - redis
@@ -25,7 +25,7 @@ services:
     image: ${REGISTRY:-kissu}/services.stage:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
-      dockerfile: Services/Basket/Basket.API/Dockerfile
+      dockerfile: services/KissU.Services.Stage/Dockerfile
     depends_on:
       - consul
       - redis

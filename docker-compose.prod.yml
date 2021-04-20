@@ -23,6 +23,8 @@ services:
   redis:
     ports:
       - "6379:6379"
+    volumes:
+      - kissu-redis:/data
 
   rabbitmq:
     ports:
@@ -74,3 +76,7 @@ services:
       - "9105:9105"
     volumes:
       - /home/kissu:/home/kissu
+
+volumes:
+  kissu-redis:
+    external: false
