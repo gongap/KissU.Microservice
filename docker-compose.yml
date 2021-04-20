@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+
+  consul:
+    image: consul:latest
+
+  redis:
+    image: redis:alpine
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  services.host:
+    image: ${REGISTRY:-kissu}/services.host:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/KissU.Services.Host/Dockerfile
+    depends_on:
+      - consul
+      - redis
+      - rabbitmq
+
+  services.stage:
+    image: ${REGISTRY:-kissu}/services.stage:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/Basket/Basket.API/Dockerfile
+    depends_on:
+      - consul
+      - redis
+      - rabbitmq
