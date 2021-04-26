@@ -1,0 +1,1 @@
+docker build -t kissustage:linux-latest -f ./services/KissU.Services.Stage/Dockerfile .

@@ -28,8 +28,6 @@ COPY "services/KissU.Services.Client/KissU.Services.Client.csproj" "services/Kis
 COPY "services/KissU.Services.Host/KissU.Services.Host.csproj" "services/KissU.Services.Host/KissU.Services.Host.csproj"
 COPY "services/KissU.Services.Stage/KissU.Services.Stage.csproj" "services/KissU.Services.Stage/KissU.Services.Stage.csproj"
 
-COPY "docker-compose.dcproj" "docker-compose.dcproj"
-
 COPY "NuGet.config" "NuGet.config"
 
 RUN dotnet restore "KissU.Microservice.sln"

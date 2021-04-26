@@ -1,0 +1,1 @@
+docker build -t kissuhost:linux-latest -f ./services/KissU.Services.Host/Dockerfile .
