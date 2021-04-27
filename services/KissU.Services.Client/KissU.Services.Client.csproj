@@ -12,8 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="KissU.CPlatform" Version="1.2.2" />
-    <PackageReference Include="KissU.CPlatform" Version="1.2.2" />
+    <PackageReference Include="KissU.CPlatform" Version="1.2.9" />
     <PackageReference Include="KissU.Codec.MessagePack" Version="1.2.9" />
     <PackageReference Include="KissU.Codec.ProtoBuffer" Version="1.2.9" />
     <PackageReference Include="KissU.EventBus.RabbitMQ" Version="1.2.9" />

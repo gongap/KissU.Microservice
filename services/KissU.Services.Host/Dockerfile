@@ -30,7 +30,7 @@ COPY "services/KissU.Services.Stage/KissU.Services.Stage.csproj" "services/KissU
 
 COPY "NuGet.config" "NuGet.config"
 
-RUN dotnet restore "KissU.Microservice.sln"
+RUN dotnet restore "KissU.Microservice.sln" --packages /mnt/d/ProGet\Packages/nugetv2/F1
 
 COPY . .
 WORKDIR /src/services/KissU.Services.Host
