@@ -35,7 +35,7 @@
     ]
   },
   "Stage": {
-    "EnableHttps": false,
+    "EnableHttps": true,
     "CertificateFileName": "${CertificateFileName}|",
     "CertificateLocation": "${CertificateLocation}|pfxs",
     "CertificatePassword": "${CertificatePassword}|",
