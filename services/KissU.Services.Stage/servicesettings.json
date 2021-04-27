@@ -36,9 +36,9 @@
   },
   "Stage": {
     "EnableHttps": true,
-    "CertificateFileName": "${CertificateFileName}|",
+    "CertificateFileName": "${CertificateFileName}|server.pfx",
     "CertificateLocation": "${CertificateLocation}|pfxs",
-    "CertificatePassword": "${CertificatePassword}|",
+    "CertificatePassword": "${CertificatePassword}|KissU@20210427",
     "IsCamelCaseResolver": "${IsCamelCaseResolver}|true",
     "Protocols": "Http1AndHttp2",
     "AuthServer": {
