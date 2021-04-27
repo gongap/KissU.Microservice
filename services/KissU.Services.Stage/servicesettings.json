@@ -70,7 +70,7 @@
         "Enable": true
       }
     ],
-    "HttpPorts": "${StageHttpPorts}|9080",
+    "HttpPorts": "${StageHttpPorts}|9180",
     "HttpsPort": "${StageHttpsPorts}|9443"
   },
   "Consul": {
