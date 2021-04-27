@@ -1,0 +1,1 @@
+docker run --name kissuhost -p 81:81 -p 8101:8101 -p 8102:8102 -p 8103:8103 -p 8104:8104 -p 8105:8105 --env Register_Conn=172.17.0.2:8500 --env EventBusConnection=172.17.0.3 kissuhost:linux-latest
