@@ -76,14 +76,7 @@
     <None Update="stagesettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="pfxs\server.pfx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="pfxs\server.pfx">
+    <Content Include="server.pfx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

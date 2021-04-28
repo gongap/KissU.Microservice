@@ -50,7 +50,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE = LICENSE
 		NuGet.config = NuGet.config
 		README.md = README.md
-		server.pfx = server.pfx
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KissU.Services.Client", "services\KissU.Services.Client\KissU.Services.Client.csproj", "{0BC1339C-4A77-4639-BDF7-3FD38A2F1D1F}"
